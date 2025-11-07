@@ -74,8 +74,8 @@ ext("dct") -> "TibetDoc".
 
 menu(File,Author) ->
    {[A,B,C|_],L} = case lists:reverse(string:tokens(os:cmd("pwd"),"\n/")) of
-               ["texts",X,Y,Z|_] -> {[X,Y,Z],""};
-               [_,"texts",X,Y,Z|_] -> {[X,Y,Z],"../"} end,
+               [_,X,Y,Z|_] -> {[X,Y,Z],""};
+               [_,_,X,Y,Z|_] -> {[X,Y,Z],"../"} end,
    Files = mad_repl:wildcards([tex2(File,".{htm,pdf,txt,dct}")]),
    #panel{id=navcontainer,
           style="margin-top:-8px;margin-left:-8px;margin-right:-8px;border-bottom:1px solid;",
