@@ -1,4 +1,4 @@
-PUB: BUDA Publishing System
+BDRC/BUDA Publishing System
 ===========================
 
 ```
